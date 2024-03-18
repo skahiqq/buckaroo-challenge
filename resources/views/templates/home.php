@@ -167,7 +167,9 @@ include 'resources/views/partials/navbar.php';
 
     // start new round
     function startNewRound() {
-        if (roleToAsk.includes(userRole) && roles.includes(userRole)) {
+        let isUserAliveAndPlayer = roleToAsk.includes(userRole) && roles.includes(userRole);
+
+        if (isUserAliveAndPlayer) {
             roles.forEach((e, index) => {
                 if (e !== userRole) {
                     document.getElementById(e).removeAttribute('onclick');
@@ -176,8 +178,6 @@ include 'resources/views/partials/navbar.php';
                     startBtn.onclick = '';
                 }
             });
-        } else {
-            setSaveSuspectAndVictim();
         }
 
         // if is last step
@@ -230,6 +230,9 @@ include 'resources/views/partials/navbar.php';
                 newGameRoles = this.getRolesWithoutSpecificRole();
                 chooseVictim = this.getRandomInt(newGameRoles.length);
                 victim = newGameRoles[chooseVictim];
+            }
+            if (!isUserAliveAndPlayer) {
+                setSaveSuspectAndVictim();
             }
         }
 
