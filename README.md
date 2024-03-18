@@ -1,3 +1,9 @@
+    Steps to Set Up the App:
+        composer i  
+        npm i.
+
+
+
     Mafia Game Challenge
 
     Overview:
