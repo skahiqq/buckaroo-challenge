@@ -29,7 +29,7 @@ class HomeController extends Controller
 
             $this->render('templates/home', [
                 'user' => $user,
-                'role' => $this->getRandomRole(),//'Detective'
+                'role' => $this->getRandomRole(),
                 'roles' => $this->getRoleKeys()
             ]);
             exit;
