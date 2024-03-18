@@ -2,7 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\User;
-use App\Traits\Mafia;
+use App\traits\Mafia;
 
 class HomeController extends Controller
 {
