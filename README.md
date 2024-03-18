@@ -1,6 +1,6 @@
     Steps to Set Up the App:
         composer i  
-        npm i.
+        npm i
 
 
 
