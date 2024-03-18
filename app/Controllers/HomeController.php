@@ -2,9 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\User;
-use App\Services\Auth;
-use App\Services\Middleware;
-use App\traits\Mafia;
+use App\Traits\Mafia;
 
 class HomeController extends Controller
 {
@@ -17,6 +15,10 @@ class HomeController extends Controller
         $this->userModel = new User();
     }
 
+    /**
+     * @return void
+     * @throws \Exception
+     */
     public function index()
     {
         session_start();
